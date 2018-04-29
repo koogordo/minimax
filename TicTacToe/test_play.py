@@ -75,12 +75,12 @@ aiPlayer = 'X'
 human = 'O'
 board = ['0','1','2','3','4','5','6','7','8']
 
-print board[0] + " | " + board[1] + " | " + board[2]
-print '----------'
-print board[3] + " | " + board[4] + " | " + board[5]
-print '----------'
-print board[6] + " | " + board[7] + " | " + board[8]
-print "\n"
+print(board[0] + " | " + board[1] + " | " + board[2])
+print('----------')
+print(board[3] + " | " + board[4] + " | " + board[5])
+print('----------')
+print(board[6] + " | " + board[7] + " | " + board[8])
+print("\n")
 
 while(not check_winner(board, human) and not check_winner(board, aiPlayer)):
 
@@ -91,36 +91,34 @@ while(not check_winner(board, human) and not check_winner(board, aiPlayer)):
     board[int(p_move)] = human
 
     if (check_winner(board, human)):
-        print "Player 1 wins!"
+        print("Player 1 wins!")
         break
 
-    elif(len(available_moves(board)) == 0):
-        print "Cats game!"
     else:
 
-        print board[0] + " | " + board[1] + " | " + board[2]
-        print '----------'
-        print board[3] + " | " + board[4] + " | " + board[5]
-        print '----------'
-        print board[6] + " | " + board[7] + " | " + board[8]
-        print "\n"
+        print(board[0] + " | " + board[1] + " | " + board[2])
+        print('----------')
+        print(board[3] + " | " + board[4] + " | " + board[5])
+        print ('----------')
+        print(board[6] + " | " + board[7] + " | " + board[8])
+        print("\n")
 
 
 
     if(check_winner(board, aiPlayer)):
-        print "computer wins"
+        print("computer wins")
         break
-    elif (len(available_moves(board)) == 0):
-        print "Cats game!"
+    # elif (len(available_moves(board)) == 0):
+    #     print("Cats game!")
     else:
         comp_move = minmax(board, aiPlayer)
         board[int(comp_move['index'])] = aiPlayer
-        print board[0] + " | " + board[1] + " | " + board[2]
-        print '----------'
-        print board[3] + " | " + board[4] + " | " + board[5]
-        print '----------'
-        print board[6] + " | " + board[7] + " | " + board[8]
-        print "\n"
+        print(board[0] + " | " + board[1] + " | " + board[2])
+        print('----------')
+        print(board[3] + " | " + board[4] + " | " + board[5])
+        print ('----------')
+        print(board[6] + " | " + board[7] + " | " + board[8])
+        print("\n")
 
 
 
